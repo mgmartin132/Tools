@@ -9,5 +9,5 @@ $diskTotal = Get-Disk | Where-Object Number -EQ 0 | Select-Object Size
 # Calculates and prints the amount of space on the disk that is not allocated/partitioned
 $unallocated = ($diskTotal.size - $allocated.sum)
 # Converts the value to MB
-$unallocated = ($unallocated / 1048576)
+$unallocated = ($unallocated / 1MB)
 $unallocated
